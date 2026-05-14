@@ -1,0 +1,339 @@
+/* 漣 — i18n typography overrides
+   Loaded LAST so that English-mode font sizing wins over the base rules.
+   Filename is intentionally distinct from main.css to bypass any browser cache. */
+
+/* ==================== EN mode: hide JP spans, show EN spans ==================== */
+
+html[lang="ja"] [lang="en"] { display: none !important; }
+html[lang="en"] [lang="ja"] { display: none !important; }
+
+/* ==================== Page heroes ==================== */
+
+html[lang="en"] .home-hero__title-jp {
+  font-family: var(--font-en-serif) !important;
+  font-size: clamp(2.5rem, 5vw, 4.75rem) !important;
+  letter-spacing: var(--ls-en-wide) !important;
+  line-height: 1.2 !important;
+  font-style: italic !important;
+  font-weight: var(--fw-light) !important;
+  max-width: 22ch;
+  text-wrap: balance;
+}
+
+html[lang="en"] .home-closing__title {
+  font-family: var(--font-en-serif) !important;
+  font-size: clamp(2rem, 3.8vw, 3.25rem) !important;
+  letter-spacing: var(--ls-en-wide) !important;
+  line-height: 1.25 !important;
+  font-style: italic !important;
+  font-weight: var(--fw-light) !important;
+  text-wrap: balance;
+}
+
+html[lang="en"] .page-hero__title-jp {
+  font-family: var(--font-en-serif) !important;
+  font-size: clamp(2.25rem, 4vw, 3.75rem) !important;
+  letter-spacing: var(--ls-en-wide) !important;
+  line-height: 1.2 !important;
+  font-style: italic !important;
+  font-weight: var(--fw-light) !important;
+  text-wrap: balance;
+}
+
+/* ==================== Headings (intro / section / room / dining) ==================== */
+
+html[lang="en"] .home-intro__heading,
+html[lang="en"] .home-rooms__title,
+html[lang="en"] .home-experience__title,
+html[lang="en"] .home-access__title,
+html[lang="en"] .section-head__jp,
+html[lang="en"] .subpage-lead__heading,
+html[lang="en"] .feature-block__title,
+html[lang="en"] .feature-block__lead,
+html[lang="en"] .room-lead__heading,
+html[lang="en"] .dining-lead__heading,
+html[lang="en"] .room-spec__heading,
+html[lang="en"] .dining-info__heading,
+html[lang="en"] .room-reserve__heading,
+html[lang="en"] .about-statement__heading,
+html[lang="en"] .about-closing__body p,
+html[lang="en"] .dining-chef__quote,
+html[lang="en"] .rooms-amenities__heading,
+html[lang="en"] .access-info__heading,
+html[lang="en"] .access-block__heading,
+html[lang="en"] .access-city__title,
+html[lang="en"] .contact-reserve__heading {
+  font-family: var(--font-en-serif) !important;
+  font-style: italic !important;
+  font-weight: var(--fw-light) !important;
+  letter-spacing: var(--ls-en-wide) !important;
+  line-height: 1.3 !important;
+  text-wrap: balance;
+}
+
+/* ==================== Body paragraphs (English wraps better with pretty) ==================== */
+
+html[lang="en"] p,
+html[lang="en"] li,
+html[lang="en"] .card__lead,
+html[lang="en"] .home-intro__body,
+html[lang="en"] .home-experience__body,
+html[lang="en"] .subpage-lead__body,
+html[lang="en"] .feature-block__body,
+html[lang="en"] .room-lead__body,
+html[lang="en"] .dining-lead__body,
+html[lang="en"] .about-statement__body {
+  text-wrap: pretty;
+}
+
+/* English body text reads better at a slightly narrower max-width */
+html[lang="en"] .container-text {
+  max-width: 640px;
+}
+
+/* ==================== Footer tagline (top page big "ひと漣..." → English) ==================== */
+
+html[lang="en"] .site-footer__tagline {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-weight: var(--fw-light);
+  letter-spacing: var(--ls-en-wide);
+}
+
+/* ==================== Card titles (room/dining card) ==================== */
+
+html[lang="en"] .card__title {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-weight: var(--fw-light);
+  letter-spacing: var(--ls-en-wide);
+}
+
+/* ==================== Spec table tweaks ==================== */
+
+html[lang="en"] .spec-table th {
+  white-space: nowrap;
+}
+
+/* ==================== EN: Make news-list responsive (titles get longer) ==================== */
+
+html[lang="en"] .news-list__title {
+  text-wrap: pretty;
+}
+
+/* ==================== Misc small tweaks ==================== */
+
+html[lang="en"] .feature-block__tag {
+  font-style: italic;
+}
+
+/* ==================== News article detail page ==================== */
+
+.article {
+  max-width: var(--container-text);
+  margin-inline: auto;
+  padding-inline: var(--container-pad-x);
+  padding-block: var(--section-pad-y);
+}
+
+.article__breadcrumb {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: var(--fs-sm);
+  letter-spacing: var(--ls-en-wide);
+  color: var(--color-text-3);
+  margin-bottom: var(--space-7);
+}
+
+.article__breadcrumb a {
+  color: var(--color-text-3);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.article__breadcrumb a:hover {
+  color: var(--color-text);
+}
+
+.article__breadcrumb-sep {
+  color: var(--color-text-4);
+}
+
+.article__meta {
+  display: flex;
+  gap: var(--space-5);
+  align-items: center;
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.article__date {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: var(--fs-sm);
+  letter-spacing: var(--ls-en);
+  color: var(--color-text-3);
+}
+
+.article__cat {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-en-wide);
+  color: var(--color-text-3);
+  text-transform: uppercase;
+}
+
+.article__title {
+  font-family: var(--font-jp-serif);
+  font-size: var(--fs-2xl);
+  letter-spacing: var(--ls-heading);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-regular);
+  margin-bottom: var(--space-7);
+  text-wrap: balance;
+}
+
+html[lang="en"] .article__title {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-weight: var(--fw-light);
+  letter-spacing: var(--ls-en-wide);
+  line-height: 1.3;
+}
+
+.article__hero {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  margin-bottom: var(--space-7);
+}
+
+.article__hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article__body {
+  font-family: var(--font-jp-serif);
+  font-size: var(--fs-md);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text);
+}
+
+.article__body p {
+  margin-block: 1.5em;
+  text-wrap: pretty;
+}
+
+.article__body p:first-child {
+  margin-block-start: 0;
+}
+
+html[lang="en"] .article__body {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-weight: var(--fw-light);
+  font-size: var(--fs-md);
+  line-height: 1.8;
+  letter-spacing: var(--ls-en);
+}
+
+.article__body blockquote {
+  font-family: var(--font-jp-serif);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-relaxed);
+  letter-spacing: var(--ls-heading);
+  padding: var(--space-5) 0 var(--space-5) var(--space-5);
+  border-left: 1px solid var(--color-line);
+  color: var(--color-text);
+  margin-block: var(--space-7);
+}
+
+html[lang="en"] .article__body blockquote {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-weight: var(--fw-light);
+}
+
+.article__footer {
+  margin-top: var(--space-9);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-line);
+  display: flex;
+  justify-content: center;
+}
+
+.article-related {
+  background: var(--color-bg-pure);
+  padding-block: var(--section-pad-y);
+}
+
+.article-related__inner {
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+  padding-inline: var(--container-pad-x);
+}
+
+.article-related__head {
+  text-align: center;
+  margin-bottom: var(--space-7);
+}
+
+.article-related__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 767px) {
+  .article-related__list {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+}
+
+.article-related__item {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.article-related__item-meta {
+  display: flex;
+  gap: var(--space-3);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-en);
+}
+
+.article-related__item-date {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  color: var(--color-text-3);
+}
+
+.article-related__item-cat {
+  font-family: var(--font-sans);
+  letter-spacing: var(--ls-en-wide);
+  text-transform: uppercase;
+  color: var(--color-text-3);
+}
+
+.article-related__item-title {
+  font-family: var(--font-jp-serif);
+  font-size: var(--fs-md);
+  letter-spacing: var(--ls-body);
+  color: var(--color-text);
+  line-height: var(--lh-snug);
+}
+
+html[lang="en"] .article-related__item-title {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-weight: var(--fw-light);
+}

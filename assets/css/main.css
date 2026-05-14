@@ -1,0 +1,17 @@
+/* 漣 — main.css : entry point */
+
+@import url("./_reset.css?v=20260510b");
+@import url("./_tokens.css?v=20260510b");
+@import url("./_base.css?v=20260510b");
+@import url("./_animations.css?v=20260510b");
+@import url("./_utilities.css?v=20260510b");
+@import url("./_components.css?v=20260510b");
+@import url("./_chatbot.css?v=20260510b");
+
+/* Page-specific imports happen via inline tags or per-page <link>.
+   For simplicity, all page CSS is also imported here so a single
+   <link rel="stylesheet" href="/assets/css/main.css"> covers everything. */
+@import url("./pages/home.css?v=20260510b");
+@import url("./pages/rooms-detail.css?v=20260510b");
+@import url("./pages/dining-detail.css?v=20260510b");
+@import url("./pages/subpages.css?v=20260510b");

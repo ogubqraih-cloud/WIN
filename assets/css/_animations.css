@@ -1,0 +1,137 @@
+/* Animations & Motion */
+
+/* ==================== Keyframes ==================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(0.5em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1.0); }
+  to   { transform: scale(1.08); }
+}
+
+@keyframes maskReveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes scrollLine {
+  0%   { transform: scaleY(0); transform-origin: top; }
+  50%  { transform: scaleY(1); transform-origin: top; }
+  51%  { transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ==================== Scroll-fade utility ==================== */
+
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(0.5em);
+  transition: opacity var(--dur-slow) var(--ease-out),
+              transform var(--dur-slow) var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.scroll-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sequential delays for stacked elements */
+.scroll-fade[data-delay="1"] { transition-delay: 100ms; }
+.scroll-fade[data-delay="2"] { transition-delay: 200ms; }
+.scroll-fade[data-delay="3"] { transition-delay: 300ms; }
+.scroll-fade[data-delay="4"] { transition-delay: 400ms; }
+.scroll-fade[data-delay="5"] { transition-delay: 500ms; }
+
+/* ==================== Hero image slow zoom ==================== */
+
+.hero-img,
+.hero-img-bg {
+  animation: slowZoom var(--dur-cinematic) var(--ease-out) forwards;
+  transform-origin: center;
+}
+
+/* ==================== Mask-reveal headline ==================== */
+
+.mask-reveal {
+  display: inline-block;
+  clip-path: inset(0 100% 0 0);
+  animation: maskReveal var(--dur-very-slow) var(--ease-out) 0.2s forwards;
+}
+
+/* ==================== Scroll indicator (vertical line) ==================== */
+
+.scroll-indicator {
+  position: absolute;
+  bottom: var(--space-7);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-bg);
+  font-family: var(--font-en-serif);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-en-wide);
+  font-style: italic;
+  pointer-events: none;
+  z-index: var(--z-content);
+}
+
+.scroll-indicator__line {
+  position: relative;
+  display: block;
+  width: 1px;
+  height: 64px;
+  background: rgba(250, 248, 244, 0.3);
+  overflow: hidden;
+}
+
+.scroll-indicator__line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg);
+  animation: scrollLine 2.4s var(--ease-in-out) infinite;
+}
+
+/* ==================== Reduced motion ==================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .scroll-fade,
+  .scroll-fade.is-visible,
+  .mask-reveal {
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+  }
+
+  .hero-img,
+  .hero-img-bg {
+    animation: none;
+  }
+}

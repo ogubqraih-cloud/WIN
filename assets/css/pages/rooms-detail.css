@@ -1,0 +1,201 @@
+/* Room detail page styles (template for sazanami / nagi / migiwa / tana) */
+
+.room-lead {
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.room-lead__heading {
+  font-family: var(--font-jp-serif);
+  font-size: var(--fs-2xl);
+  letter-spacing: var(--ls-heading);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--space-5);
+  text-wrap: balance;
+}
+
+html[lang="en"] .room-lead__heading,
+html[lang="en"] .room-reserve__heading {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-weight: var(--fw-light);
+  letter-spacing: var(--ls-en-wide);
+  line-height: 1.3;
+}
+
+html[lang="en"] .room-lead__body p {
+  text-wrap: pretty;
+}
+
+.room-lead__en {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: var(--fs-md);
+  letter-spacing: var(--ls-en-wide);
+  color: var(--color-text-3);
+  margin-bottom: var(--space-7);
+}
+
+.room-lead__body {
+  max-width: 32em;
+  margin-inline: auto;
+  font-size: var(--fs-md);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-2);
+}
+
+.room-lead__body p + p { margin-top: 1em; }
+
+/* Gallery — large mosaic */
+
+.room-gallery {
+  padding-block: var(--section-pad-y-sm);
+}
+
+.room-gallery__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--space-3);
+  height: clamp(560px, 70vh, 800px);
+}
+
+.room-gallery__item {
+  overflow: hidden;
+  position: relative;
+}
+
+.room-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-very-slow) var(--ease-out);
+}
+
+.room-gallery__item:hover img {
+  transform: scale(1.04);
+}
+
+.room-gallery__item--lg {
+  grid-row: 1 / 3;
+}
+
+@media (max-width: 767px) {
+  .room-gallery__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    height: auto;
+  }
+
+  .room-gallery__item {
+    aspect-ratio: 3 / 2;
+  }
+
+  .room-gallery__item--lg {
+    grid-row: auto;
+  }
+}
+
+/* Spec section */
+
+.room-spec {
+  padding-block: var(--section-pad-y);
+}
+
+.room-spec__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--space-9);
+  align-items: start;
+}
+
+@media (max-width: 1199px) {
+  .room-spec__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+}
+
+.room-spec__heading {
+  font-family: var(--font-jp-serif);
+  font-size: var(--fs-xl);
+  letter-spacing: var(--ls-heading);
+  margin-bottom: var(--space-5);
+}
+
+.room-spec__heading-en {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: var(--fs-sm);
+  letter-spacing: var(--ls-en-wide);
+  color: var(--color-text-3);
+  margin-bottom: var(--space-2);
+}
+
+/* Other rooms */
+
+.room-others {
+  background: var(--color-bg-pure);
+  padding-block: var(--section-pad-y);
+}
+
+.room-others__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-7);
+}
+
+@media (max-width: 1199px) {
+  .room-others__list {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+}
+
+.room-others__cta {
+  text-align: center;
+  margin-top: var(--space-8);
+}
+
+/* Reservation CTA section */
+
+.room-reserve {
+  background: var(--color-bg-deep);
+  color: var(--color-text-on-deep);
+  text-align: center;
+  padding-block: var(--space-10);
+}
+
+.room-reserve__heading {
+  font-family: var(--font-jp-serif);
+  font-size: var(--fs-2xl);
+  letter-spacing: var(--ls-heading);
+  margin-bottom: var(--space-3);
+}
+
+.room-reserve__en {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: var(--fs-md);
+  letter-spacing: var(--ls-en-wide);
+  color: rgba(250, 248, 244, 0.7);
+  margin-bottom: var(--space-7);
+}
+
+.room-reserve__ctas {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.room-reserve__ctas .btn--ghost {
+  color: var(--color-bg);
+  border-color: var(--color-bg);
+}
+
+.room-reserve__ctas .btn--ghost:hover {
+  background: var(--color-bg);
+  color: var(--color-text);
+}

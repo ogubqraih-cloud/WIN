@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>客室｜漣 Sazanami</title>
+<meta name="description" content="全22室。漣・凪・汀・棚、それぞれに一文字の名を持つ4タイプの客室。">
+<meta name="theme-color" content="#FAF8F4">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@400;500&family=Zen+Old+Mincho:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/main.css?v=20260510b">
+<link rel="stylesheet" href="../assets/css/i18n-typography.css?v=20260510c">
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="site-header__inner">
+    <a href="../" class="site-header__logo" aria-label="漣 Sazanami ホーム">
+      <span class="site-header__logo-mark">漣</span>
+      <span class="site-header__logo-en">SAZANAMI</span>
+    </a>
+    <nav class="site-header__nav" aria-label="グローバルナビゲーション">
+      <ul class="site-header__nav-list">
+        <li><a class="site-header__nav-link" href="../about/" data-i18n="nav.about">漣について</a></li>
+        <li><a class="site-header__nav-link" href="../rooms/" data-i18n="nav.rooms">客室</a></li>
+        <li><a class="site-header__nav-link" href="../dining/" data-i18n="nav.dining">ダイニング</a></li>
+        <li><a class="site-header__nav-link" href="../facilities/" data-i18n="nav.facilities">施設</a></li>
+        <li><a class="site-header__nav-link" href="../experience/" data-i18n="nav.experience">過ごし方</a></li>
+        <li><a class="site-header__nav-link" href="../access/" data-i18n="nav.access">アクセス</a></li>
+        <li><a class="site-header__nav-link" href="../news/" data-i18n="nav.news">お知らせ</a></li>
+      </ul>
+      <div class="site-header__lang">
+        <button class="lang-btn" type="button" data-lang="ja">JP</button><span>/</span><button class="lang-btn" type="button" data-lang="en">EN</button>
+      </div>
+      <a class="site-header__cta" href="../contact/" data-i18n="nav.reserve">予約 →</a>
+    </nav>
+    <button class="hamburger" aria-label="メニューを開く" data-i18n-aria-label="nav.menu_open" aria-expanded="false" aria-controls="sp-menu">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </div>
+</header>
+
+<div class="sp-menu" id="sp-menu" role="dialog" aria-label="メニュー">
+  <ul class="sp-menu__list">
+    <li><a href="../about/" data-i18n="nav.about">漣について</a></li>
+    <li>
+      <a href="../rooms/" data-i18n="nav.rooms">客室</a>
+      <ul class="sp-menu__sublist">
+        <li><a href="../rooms/sazanami/">漣</a></li>
+        <li><a href="../rooms/nagi/">凪</a></li>
+        <li><a href="../rooms/migiwa/">汀</a></li>
+        <li><a href="../rooms/tana/">棚</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="../dining/" data-i18n="nav.dining">ダイニング</a>
+      <ul class="sp-menu__sublist">
+        <li><a href="../dining/ushio/">潮</a></li>
+        <li><a href="../dining/asage/">朝餉の間</a></li>
+        <li><a href="../dining/nagi-no-ma/">凪の間</a></li>
+      </ul>
+    </li>
+    <li><a href="../facilities/" data-i18n="nav.facilities">施設</a></li>
+    <li><a href="../experience/" data-i18n="nav.experience">過ごし方</a></li>
+    <li><a href="../access/" data-i18n="nav.access">アクセス</a></li>
+    <li><a href="../news/" data-i18n="nav.news">お知らせ</a></li>
+    <li><a href="../contact/" data-i18n="nav.contact">お問い合わせ</a></li>
+  </ul>
+  <div class="sp-menu__divider"></div>
+  <a class="sp-menu__cta" href="../contact/" data-i18n="cta.reserve_now">予約する →</a>
+  <p class="sp-menu__contact">TEL: 0869-00-0000</p>
+  <div class="sp-menu__lang"><button class="lang-btn" type="button" data-lang="ja">JP</button><span>/</span><button class="lang-btn" type="button" data-lang="en">EN</button></div>
+</div>
+
+<main>
+
+  <section class="page-hero">
+    <div class="page-hero__bg">
+      <img fetchpriority="high" src="../assets/images/rooms/rooms-hero.jpg" alt="客室の窓">
+    </div>
+    <div class="page-hero__inner">
+      <h1 class="page-hero__title-jp" data-i18n="page.rooms.title_jp">客室</h1>
+      <p class="page-hero__title-en" data-i18n="page.rooms.title_en">Rooms</p>
+    </div>
+  </section>
+
+  <section class="subpage-lead container-text">
+    <p class="subpage-lead__en scroll-fade"><span lang="ja">Four rooms, four single characters.</span><span lang="en">四つの部屋、四つの一字。</span></p>
+    <h2 class="subpage-lead__heading scroll-fade" data-delay="1"><span lang="ja">一文字の名を、それぞれの部屋に。</span><span lang="en">A single character for each room.</span></h2>
+    <div class="subpage-lead__body scroll-fade" data-delay="2">
+      <p><span lang="ja">全22室。海を望む者、棚田を見下ろす者。</span><span lang="en">Twenty-two rooms in all. Some face the sea, others look down on the terraced fields.</span></p>
+      <p><span lang="ja">すべての客室から、瀬戸内のひとつの時間が見えます。</span><span lang="en">From every room, a single hour of the Seto Inland Sea is visible.</span></p>
+    </div>
+  </section>
+
+  <!-- Sazanami suite (highlight) -->
+  <section class="container">
+    <div class="feature-hero scroll-fade">
+      <div class="feature-hero__image">
+        <img loading="lazy" decoding="async" src="../assets/images/rooms/rooms-card-sazanami.jpg" alt="漣スイート">
+      </div>
+      <div class="feature-hero__caption">
+        <div>
+          <p class="feature-block__title-en">The Sazanami Suite</p>
+          <h2 class="feature-block__title">漣 -sazanami- <span style="font-family: var(--font-en-serif); font-style: italic; font-size: var(--fs-sm); color: var(--color-text-3); letter-spacing: var(--ls-en-wide); margin-left: var(--space-3);">×2</span></h2>
+        </div>
+        <div>
+          <p class="feature-block__lead"><span lang="ja">いちばん小さな波の名を、最も大きな部屋に。</span><span lang="en">The smallest wave gives its name to the largest room.</span></p>
+          <div class="feature-block__body">
+            <p><span lang="ja">80㎡。専用の桟橋と、檜の露天風呂。島の南端、海と空の境界に建つ離れの2室。</span><span lang="en">80 sqm. A private pier and an open-air hinoki bath. Two detached suites at the southern tip, where sea meets sky.</span></p>
+            <p><span lang="ja">寝室、居間、書斎、湯、テラス。日没から夜明けまで、誰の気配も届きません。</span><span lang="en">Bedroom, living room, study, bath, terrace. From sunset to dawn, no other presence reaches you.</span></p>
+          </div>
+          <a class="cta-link" href="sazanami/"><span lang="ja">漣の詳細を見る</span><span lang="en">View The Sazanami Suite</span><span class="cta-link__arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nagi -->
+    <div class="feature-block">
+      <div class="feature-block__image scroll-fade">
+        <img loading="lazy" decoding="async" src="../assets/images/rooms/nagi/nagi-hero.jpg" alt="凪 - 海側スイート">
+      </div>
+      <div class="scroll-fade" data-delay="1">
+        <p class="feature-block__title-en">The Nagi Suite</p>
+        <h2 class="feature-block__title">凪 -nagi- <span style="font-family: var(--font-en-serif); font-style: italic; font-size: var(--fs-sm); color: var(--color-text-3); letter-spacing: var(--ls-en-wide); margin-left: var(--space-3);">×6</span></h2>
+        <p class="feature-block__lead"><span lang="ja">朝凪の海が、窓の中に立つ。</span><span lang="en">The morning calm of the sea, framed by the window.</span></p>
+        <div class="feature-block__body">
+          <p><span lang="ja">60㎡。海側に大きな開口、半露天の風呂。朝、目を開けると、まず海が見えます。</span><span lang="en">60 sqm. Large openings facing the sea, a semi-open-air bath. When you open your eyes in the morning, the sea is the first thing you see.</span></p>
+        </div>
+        <a class="cta-link" href="nagi/"><span lang="ja">凪の詳細を見る</span><span lang="en">View The Nagi Suite</span><span class="cta-link__arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Migiwa -->
+    <div class="feature-block feature-block--reverse">
+      <div class="feature-block__image scroll-fade">
+        <img loading="lazy" decoding="async" src="../assets/images/rooms/migiwa/migiwa-hero.jpg" alt="汀 - 海側デラックス">
+      </div>
+      <div class="scroll-fade" data-delay="1">
+        <p class="feature-block__title-en">The Migiwa</p>
+        <h2 class="feature-block__title">汀 -migiwa- <span style="font-family: var(--font-en-serif); font-style: italic; font-size: var(--fs-sm); color: var(--color-text-3); letter-spacing: var(--ls-en-wide); margin-left: var(--space-3);">×8</span></h2>
+        <p class="feature-block__lead"><span lang="ja">汀に立つ、ふたりの部屋。</span><span lang="en">A room for two, standing at the water edge.</span></p>
+        <div class="feature-block__body">
+          <p><span lang="ja">45㎡。海側、内湯。夕暮れ時、水面の光が天井に届きます。</span><span lang="en">45 sqm. Sea-facing, with an indoor bath. At dusk, light from the water reaches the ceiling.</span></p>
+        </div>
+        <a class="cta-link" href="migiwa/"><span lang="ja">汀の詳細を見る</span><span lang="en">View The Migiwa</span><span class="cta-link__arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Tana -->
+    <div class="feature-block">
+      <div class="feature-block__image scroll-fade">
+        <img loading="lazy" decoding="async" src="../assets/images/rooms/tana/tana-hero.jpg" alt="棚 - 島側">
+      </div>
+      <div class="scroll-fade" data-delay="1">
+        <p class="feature-block__title-en">The Tana</p>
+        <h2 class="feature-block__title">棚 -tana- <span style="font-family: var(--font-en-serif); font-style: italic; font-size: var(--fs-sm); color: var(--color-text-3); letter-spacing: var(--ls-en-wide); margin-left: var(--space-3);">×6</span></h2>
+        <p class="feature-block__lead"><span lang="ja">棚田跡の、緑のあかり。</span><span lang="en">The green light of the former terraced fields.</span></p>
+        <div class="feature-block__body">
+          <p><span lang="ja">40㎡。島側、内湯。かつて棚田だった斜面の、季節のうつろいを見守る部屋。</span><span lang="en">40 sqm. Inland-facing, with an indoor bath. A room that watches the seasons turn on the slopes once carved into rice terraces.</span></p>
+        </div>
+        <a class="cta-link" href="tana/"><span lang="ja">棚の詳細を見る</span><span lang="en">View The Tana</span><span class="cta-link__arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common amenities -->
+  <section class="rooms-amenities">
+    <div class="rooms-amenities__inner">
+      <div class="scroll-fade">
+        <p class="rooms-amenities__heading-en">Amenities</p>
+        <h2 class="rooms-amenities__heading"><span lang="ja">全室に</span><span lang="en">In every room</span></h2>
+      </div>
+      <ul class="rooms-amenities__list scroll-fade" data-delay="1">
+        <li><span lang="ja">瀬戸内の塩のバスソルト</span><span lang="en">Bath salts from the Seto Inland Sea</span></li>
+        <li><span lang="ja">椿油のアメニティ</span><span lang="en">Camellia-oil amenities</span></li>
+        <li><span lang="ja">茶器セット（島の急須）</span><span lang="en">Tea set (island-made teapot)</span></li>
+        <li><span lang="ja">麻と綿の混紡の寝具</span><span lang="en">Linen-and-cotton bedding</span></li>
+        <li><span lang="ja">読書灯と書見台</span><span lang="en">Reading light and book stand</span></li>
+        <li><span lang="ja">無線LAN（あえて低速）</span><span lang="en">Wi-Fi (intentionally modest)</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Reservation CTA -->
+  <section class="room-reserve">
+    <div class="scroll-fade">
+      <p style="font-family: var(--font-en-serif); font-style: italic; font-size: var(--fs-sm); letter-spacing: var(--ls-en-wide); color: rgba(250,248,244,0.6); margin-bottom: var(--space-3);">Reservation</p>
+      <h2 class="room-reserve__heading"><span lang="ja">客室を、予約する。</span><span lang="en">Reserve a room.</span></h2>
+      <p class="room-reserve__en">Reserve a room</p>
+      <div class="room-reserve__ctas">
+        <a class="btn btn--primary" href="../contact/" style="background: var(--color-bg); color: var(--color-text);"><span lang="ja">予約 →</span><span lang="en">Reserve →</span></a>
+        <a class="btn btn--ghost" href="../contact/"><span lang="ja">お問い合わせ →</span><span lang="en">Contact →</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="site-footer__inner">
+    <div class="site-footer__top">
+      <div class="site-footer__logo">漣</div>
+      <p class="site-footer__tagline" data-i18n="footer.tagline_jp">ひと漣の、贅沢。</p>
+      <p class="site-footer__tagline-en" data-i18n="footer.tagline_en">Luxury, in a single ripple.</p>
+    </div>
+    <div class="site-footer__cols">
+      <div>
+        <p class="site-footer__col-title">Sitemap</p>
+        <ul class="site-footer__col-list">
+          <li><a href="../about/" data-i18n="nav.about">漣について</a></li>
+          <li><a href="../rooms/" data-i18n="nav.rooms">客室</a></li>
+          <li><a href="../dining/" data-i18n="nav.dining">ダイニング</a></li>
+          <li><a href="../facilities/" data-i18n="nav.facilities">施設</a></li>
+          <li><a href="../experience/" data-i18n="nav.experience">過ごし方</a></li>
+          <li><a href="../access/" data-i18n="nav.access">アクセス</a></li>
+          <li><a href="../news/" data-i18n="nav.news">お知らせ</a></li>
+          <li><a href="../contact/" data-i18n="nav.contact">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-footer__col-title">Contact</p>
+        <ul class="site-footer__col-list">
+          <li data-i18n="footer.address">〒705-0000 岡山県備前市凪島</li>
+          <li data-i18n="footer.tel">TEL：0869-00-0000</li>
+          <li data-i18n="footer.hours">受付：10:00 - 18:00</li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-footer__col-title">Follow</p>
+        <ul class="site-footer__col-list">
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© <span data-year>2026</span> 漣 / Sazanami</span>
+      <a href="../privacy/" data-i18n="footer.privacy">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/i18n.js?v=20260510b" defer></script>
+<script src="../assets/js/main.js?v=20260510b" defer></script>
+<script src="../assets/js/chatbot.js?v=20260510b" defer></script>
+
+</body>
+</html>

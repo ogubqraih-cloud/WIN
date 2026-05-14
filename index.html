@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>漣 -Sazanami- ｜ 瀬戸内、凪島の宿</title>
+<meta name="description" content="漣（さざなみ）は、瀬戸内の小さな島に建つ22室の宿です。朝凪と夕凪のあいだ、水面と一緒に時間が止まる場所。">
+<meta name="theme-color" content="#FAF8F4">
+<link rel="canonical" href="https://sazanami.example.com/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@400;500&family=Zen+Old+Mincho:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/main.css?v=20260510b">
+<link rel="stylesheet" href="assets/css/i18n-typography.css?v=20260510c">
+</head>
+<body>
+
+<!-- ==================== Header ==================== -->
+<header class="site-header" role="banner">
+  <div class="site-header__inner">
+    <a href="./" class="site-header__logo" aria-label="漣 Sazanami ホーム">
+      <span class="site-header__logo-mark">漣</span>
+      <span class="site-header__logo-en">SAZANAMI</span>
+    </a>
+
+    <nav class="site-header__nav" aria-label="グローバルナビゲーション">
+      <ul class="site-header__nav-list">
+        <li><a class="site-header__nav-link" href="about/" data-i18n="nav.about">漣について</a></li>
+        <li><a class="site-header__nav-link" href="rooms/" data-i18n="nav.rooms">客室</a></li>
+        <li><a class="site-header__nav-link" href="dining/" data-i18n="nav.dining">ダイニング</a></li>
+        <li><a class="site-header__nav-link" href="facilities/" data-i18n="nav.facilities">施設</a></li>
+        <li><a class="site-header__nav-link" href="experience/" data-i18n="nav.experience">過ごし方</a></li>
+        <li><a class="site-header__nav-link" href="access/" data-i18n="nav.access">アクセス</a></li>
+        <li><a class="site-header__nav-link" href="news/" data-i18n="nav.news">お知らせ</a></li>
+      </ul>
+      <div class="site-header__lang" aria-label="言語切替">
+        <button class="lang-btn" type="button" data-lang="ja">JP</button><span>/</span><button class="lang-btn" type="button" data-lang="en">EN</button>
+      </div>
+      <a class="site-header__cta" href="contact/" data-i18n="nav.reserve">予約 →</a>
+    </nav>
+
+    <button class="hamburger" aria-label="メニューを開く" data-i18n-aria-label="nav.menu_open" aria-expanded="false" aria-controls="sp-menu">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </div>
+</header>
+
+<!-- ==================== SP Menu ==================== -->
+<div class="sp-menu" id="sp-menu" role="dialog" aria-label="メニュー">
+  <ul class="sp-menu__list">
+    <li><a href="about/" data-i18n="nav.about">漣について</a></li>
+    <li>
+      <a href="rooms/" data-i18n="nav.rooms">客室</a>
+      <ul class="sp-menu__sublist">
+        <li><a href="rooms/sazanami/">漣</a></li>
+        <li><a href="rooms/nagi/">凪</a></li>
+        <li><a href="rooms/migiwa/">汀</a></li>
+        <li><a href="rooms/tana/">棚</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="dining/" data-i18n="nav.dining">ダイニング</a>
+      <ul class="sp-menu__sublist">
+        <li><a href="dining/ushio/">潮</a></li>
+        <li><a href="dining/asage/">朝餉の間</a></li>
+        <li><a href="dining/nagi-no-ma/">凪の間</a></li>
+      </ul>
+    </li>
+    <li><a href="facilities/" data-i18n="nav.facilities">施設</a></li>
+    <li><a href="experience/" data-i18n="nav.experience">過ごし方</a></li>
+    <li><a href="access/" data-i18n="nav.access">アクセス</a></li>
+    <li><a href="news/" data-i18n="nav.news">お知らせ</a></li>
+    <li><a href="contact/" data-i18n="nav.contact">お問い合わせ</a></li>
+  </ul>
+
+  <div class="sp-menu__divider"></div>
+
+  <a class="sp-menu__cta" href="contact/" data-i18n="cta.reserve_now">予約する →</a>
+
+  <p class="sp-menu__contact">TEL: 0869-00-0000</p>
+  <div class="sp-menu__lang"><button class="lang-btn" type="button" data-lang="ja">JP</button><span>/</span><button class="lang-btn" type="button" data-lang="en">EN</button></div>
+</div>
+
+<main>
+
+  <!-- ==================== 1. Hero ==================== -->
+  <section class="home-hero" aria-label="ヒーロー">
+    <div class="home-hero__bg">
+      <div class="home-hero__slide is-active">
+        <img fetchpriority="high" src="assets/images/top/top-hero-01.jpg" alt="">
+      </div>
+      <div class="home-hero__slide">
+        <img loading="lazy" decoding="async" src="assets/images/top/top-hero-02.jpg" alt="">
+      </div>
+      <div class="home-hero__slide">
+        <img loading="lazy" decoding="async" src="assets/images/top/top-hero-03.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="home-hero__content">
+      <h1 class="home-hero__title-jp" data-i18n="hero.tagline_jp">ひと漣の、贅沢。</h1>
+      <p class="home-hero__title-en" data-i18n="hero.tagline_en">Luxury, in a single ripple.</p>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span><span lang="ja">Scroll</span><span lang="en">Scroll</span></span>
+      <span class="scroll-indicator__line"></span>
+    </div>
+  </section>
+
+  <!-- ==================== 2. Intro ==================== -->
+  <section class="home-intro container-text">
+    <p class="home-intro__en scroll-fade"><span lang="ja">A morning when a single ripple breaks the still water.</span><span lang="en">水面に、ひと漣の立つ朝がある。</span></p>
+    <h2 class="home-intro__heading scroll-fade" data-delay="1"><span lang="ja">水面に、ひと漣の立つ朝がある。</span><span lang="en">A morning when a single ripple breaks the still water.</span></h2>
+    <div class="home-intro__body scroll-fade" data-delay="2">
+      <p><span lang="ja">朝の凪と夕の凪のあいだ、水面と一緒に時間が止まる。</span><span lang="en">Between the morning calm and the evening calm, time rests upon the water.</span></p>
+      <p><span lang="ja">瀬戸内のちいさな島に、漣はあります。</span><span lang="en">Sazanami sits on a small island in the Seto Inland Sea.</span></p>
+      <p><span lang="ja">全22室、潮と火と書、そして波音だけの宿。</span><span lang="en">Twenty-two rooms. Tide, fire, books — and the sound of waves.</span></p>
+    </div>
+    <div class="scroll-fade" data-delay="3">
+      <a class="cta-link" href="about/"><span lang="ja">漣について</span><span lang="en">About Sazanami</span><span class="cta-link__arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ==================== 3. Rooms preview ==================== -->
+  <section class="home-rooms" aria-label="客室">
+    <div class="home-rooms__visual">
+      <img loading="lazy" decoding="async" src="assets/images/top/top-rooms-01.jpg" alt="漣スイートの空間">
+      <div class="home-rooms__overlay">
+        <div class="home-rooms__overlay-inner">
+          <div class="scroll-fade">
+            <h2 class="home-rooms__title"><span lang="ja">客室</span><span lang="en">Rooms</span><span class="home-rooms__title-en"><span lang="ja">Four rooms, four single characters.</span><span lang="en">四つの部屋、四つの一字。</span></span>
+            </h2>
+          </div>
+          <ul class="home-rooms__list scroll-fade" data-delay="2">
+            <li>漣 <span>Sazanami Suite</span></li>
+            <li>凪 <span>Nagi Suite</span></li>
+            <li>汀 <span>Migiwa</span></li>
+            <li>棚 <span>Tana</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="home-rooms__cta scroll-fade" style="padding-block: var(--space-8);">
+      <a class="cta-link" href="rooms/"><span lang="ja">客室の詳細へ</span><span lang="en">Discover the rooms</span><span class="cta-link__arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ==================== 4. Dining ==================== -->
+  <section class="home-dining container">
+    <div class="section-head section-head--center scroll-fade">
+      <span class="section-head__en"><span lang="ja">Fire, salt, and the Seto Inland Sea.</span><span lang="en">火と、塩と、瀬戸内のすべて。</span></span>
+      <h2 class="section-head__jp"><span lang="ja">朝、昼、夜。</span><span lang="en">Morning, afternoon, evening.</span></h2>
+    </div>
+
+    <div class="home-dining__cards">
+      <a class="card scroll-fade" href="dining/ushio/" data-delay="1">
+        <div class="card__image">
+          <img loading="lazy" decoding="async" src="assets/images/top/top-dining-01.jpg" alt="潮 - メインダイニング">
+        </div>
+        <p class="card__title-en"><span lang="ja">Where fire meets the sea.</span><span lang="en">火が、海と出会う場所。</span></p>
+          <h3 class="card__title">潮 -ushio-</h3>
+          <p class="card__lead"><span lang="ja">薪火と発酵が、夕べを描く。</span><span lang="en">Wood fire and fermentation, drawing the evening.</span></p>
+      </a>
+
+      <a class="card scroll-fade" href="dining/asage/" data-delay="2">
+        <div class="card__image">
+          <img loading="lazy" decoding="async" src="assets/images/top/top-dining-02.jpg" alt="朝餉の間 - 朝食">
+        </div>
+        <p class="card__title-en"><span lang="ja">Breakfast in morning calm.</span><span lang="en">朝凪の食卓。</span></p>
+          <h3 class="card__title">朝餉の間 -asage-no-ma-</h3>
+          <p class="card__lead"><span lang="ja">朝凪の海と、土鍋ごはん。</span><span lang="en">The morning sea, and rice from the donabe pot.</span></p>
+      </a>
+
+      <a class="card scroll-fade" href="dining/nagi-no-ma/" data-delay="3">
+        <div class="card__image">
+          <img loading="lazy" decoding="async" src="assets/images/top/top-dining-03.jpg" alt="凪の間 - ラウンジ">
+        </div>
+        <p class="card__title-en"><span lang="ja">When sunset becomes the chair.</span><span lang="en">夕陽が椅子になる時間。</span></p>
+          <h3 class="card__title">凪の間 -nagi-no-ma-</h3>
+          <p class="card__lead"><span lang="ja">茶と酒と、夕陽の時間。</span><span lang="en">Tea, sake, and the hour of sunset.</span></p>
+      </a>
+    </div>
+
+    <div class="home-dining__cta scroll-fade">
+      <a class="cta-link" href="dining/"><span lang="ja">ダイニングの詳細へ</span><span lang="en">Discover dining</span><span class="cta-link__arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ==================== 5. Experience preview ==================== -->
+  <section class="home-experience" aria-label="過ごし方">
+    <div class="home-experience__visual">
+      <img loading="lazy" decoding="async" src="assets/images/top/top-experience-01.jpg" alt="朝凪のボートツアー">
+      <div class="home-experience__overlay">
+        <div class="scroll-fade">
+          <h2 class="home-experience__title"><span lang="ja">朝凪の、ひととき。</span><span lang="en">A moment of morning calm.</span></h2>
+        </div>
+        <p class="home-experience__title-en scroll-fade" data-delay="1"><span lang="ja">A moment of morning calm.</span><span lang="en">朝凪の、ひととき。</span></p>
+        <div class="home-experience__body scroll-fade" data-delay="2">
+          <p><span lang="ja">島の朝は、舟の音から始まる。</span><span lang="en">The island morning begins with the sound of a boat.</span></p>
+          <p><span lang="ja">夕べは、ラウンジの一杯と。</span><span lang="en">Evening, a single drink in the lounge.</span></p>
+          <p><span lang="ja">夜は、月のひかりと、波の音と。</span><span lang="en">Night, the light of the moon and the voice of the waves.</span></p>
+        </div>
+        <div class="home-experience__cta scroll-fade" data-delay="3">
+          <a class="cta-link" href="experience/"><span lang="ja">過ごし方の詳細へ</span><span lang="en">Discover the experience</span><span class="cta-link__arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. Facilities preview ==================== -->
+  <section class="home-facilities container">
+    <div class="section-head section-head--center scroll-fade">
+      <span class="section-head__en"><span lang="ja">Five places.</span><span lang="en">五つの場所。</span></span>
+      <h2 class="section-head__jp"><span lang="ja">五つの場所が、ここにあります。</span><span lang="en">Five places, here.</span></h2>
+    </div>
+
+    <ul class="home-facilities__list">
+      <li class="home-facilities__item scroll-fade" data-delay="1">
+        <div class="home-facilities__item-img">
+          <img loading="lazy" decoding="async" src="assets/images/facilities/facilities-mizukagami.jpg" alt="水鏡">
+        </div>
+        <p class="home-facilities__item-title"><span lang="ja">水鏡</span><span lang="en">Mizukagami</span>
+          <span class="home-facilities__item-title-en"><span lang="ja">The Mirror</span><span lang="en">水鏡</span></span>
+        </p>
+      </li>
+      <li class="home-facilities__item scroll-fade" data-delay="2">
+        <div class="home-facilities__item-img">
+          <img loading="lazy" decoding="async" src="assets/images/facilities/facilities-ushio-no-yu.jpg" alt="潮の湯">
+        </div>
+        <p class="home-facilities__item-title"><span lang="ja">潮の湯</span><span lang="en">Ushio-no-Yu</span>
+          <span class="home-facilities__item-title-en"><span lang="ja">The Salt Bath</span><span lang="en">潮の湯</span></span>
+        </p>
+      </li>
+      <li class="home-facilities__item scroll-fade" data-delay="3">
+        <div class="home-facilities__item-img">
+          <img loading="lazy" decoding="async" src="assets/images/facilities/facilities-fumi-no-ma.jpg" alt="文の間">
+        </div>
+        <p class="home-facilities__item-title"><span lang="ja">文の間</span><span lang="en">Fumi-no-Ma</span>
+          <span class="home-facilities__item-title-en"><span lang="ja">The Library</span><span lang="en">文の間</span></span>
+        </p>
+      </li>
+      <li class="home-facilities__item scroll-fade" data-delay="4">
+        <div class="home-facilities__item-img">
+          <img loading="lazy" decoding="async" src="assets/images/facilities/facilities-funaya.jpg" alt="舟屋">
+        </div>
+        <p class="home-facilities__item-title"><span lang="ja">舟屋</span><span lang="en">Funaya</span>
+          <span class="home-facilities__item-title-en"><span lang="ja">The Boathouse</span><span lang="en">舟屋</span></span>
+        </p>
+      </li>
+      <li class="home-facilities__item scroll-fade" data-delay="5">
+        <div class="home-facilities__item-img">
+          <img loading="lazy" decoding="async" src="assets/images/facilities/facilities-teate.jpg" alt="手当ての間">
+        </div>
+        <p class="home-facilities__item-title"><span lang="ja">手当ての間</span><span lang="en">Teate-no-Ma</span>
+          <span class="home-facilities__item-title-en"><span lang="ja">The Care</span><span lang="en">手当ての間</span></span>
+        </p>
+      </li>
+    </ul>
+
+    <div class="home-facilities__cta scroll-fade">
+      <a class="cta-link" href="facilities/"><span lang="ja">施設の詳細へ</span><span lang="en">Discover the facilities</span><span class="cta-link__arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ==================== 7. Access teaser ==================== -->
+  <section class="home-access" aria-label="アクセス">
+    <div class="home-access__visual">
+      <img loading="lazy" decoding="async" src="assets/images/top/top-access-01.jpg" alt="瀬戸内、凪島の俯瞰">
+      <div class="home-access__overlay">
+        <div class="scroll-fade">
+          <h2 class="home-access__title"><span lang="ja">瀬戸内、凪島へ。</span><span lang="en">To Nagishima, the Seto Inland Sea.</span></h2>
+        </div>
+        <p class="home-access__title-en scroll-fade" data-delay="1"><span lang="ja">To Nagishima, the Seto Inland Sea.</span><span lang="en">瀬戸内、凪島へ。</span></p>
+        <p class="home-access__body scroll-fade" data-delay="2"><span lang="ja">本州の港から、専用船で30分。<br>陸路は、ここで途切れます。</span><span lang="en">A 30-minute private boat from the mainland port.<br>The road ends here.</span></p>
+        <div class="home-access__cta scroll-fade" data-delay="3">
+          <a class="cta-link" href="access/"><span lang="ja">アクセスの詳細へ</span><span lang="en">Access details</span><span class="cta-link__arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. News ==================== -->
+  <section class="home-news container-narrow">
+    <div class="section-head section-head--center scroll-fade">
+      <span class="section-head__en">News</span>
+      <h2 class="section-head__jp"><span lang="ja">お知らせ</span><span lang="en">News</span></h2>
+    </div>
+
+    <ul class="home-news__list">
+      <li class="home-news__item scroll-fade">
+        <a href="news/salt-workshop/">
+          <span class="home-news__date">2026.06.15</span>
+          <span class="home-news__cat"><span lang="ja">体験</span><span lang="en">EXPERIENCE</span></span>
+          <span class="home-news__title"><span lang="ja">「島の塩づくり」ワークショップ開催のお知らせ</span><span lang="en">"Salt-making on the island" workshop announcement</span></span>
+        </a>
+      </li>
+      <li class="home-news__item scroll-fade" data-delay="1">
+        <a href="news/early-summer-dinner/">
+          <span class="home-news__date">2026.05.20</span>
+          <span class="home-news__cat"><span lang="ja">ダイニング</span><span lang="en">DINING</span></span>
+          <span class="home-news__title"><span lang="ja">「潮」、初夏のディナーコースをご用意しました</span><span lang="en">Ushio: early-summer dinner course now available</span></span>
+        </a>
+      </li>
+      <li class="home-news__item scroll-fade" data-delay="2">
+        <a href="news/opening/">
+          <span class="home-news__date">2026.04.01</span>
+          <span class="home-news__cat"><span lang="ja">お知らせ</span><span lang="en">NEWS</span></span>
+          <span class="home-news__title"><span lang="ja">「漣 -Sazanami-」開業のお知らせ</span><span lang="en">Sazanami opens its doors</span></span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="home-news__cta scroll-fade">
+      <a class="cta-link" href="news/"><span lang="ja">お知らせ一覧へ</span><span lang="en">All news</span><span class="cta-link__arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ==================== 9. Closing ==================== -->
+  <section class="home-closing" aria-label="クロージング">
+    <div class="home-closing__bg">
+      <img loading="lazy" decoding="async" src="assets/images/top/top-closing-01.jpg" alt="月夜の海">
+    </div>
+    <div class="home-closing__inner scroll-fade">
+      <h2 class="home-closing__title" data-i18n="hero.tagline_jp">ひと漣の、贅沢。</h2>
+      <p class="home-closing__title-en" data-i18n="hero.tagline_en">Luxury, in a single ripple.</p>
+      <div class="home-closing__ctas">
+        <a class="btn btn--primary" href="contact/"><span lang="ja">予約 →</span><span lang="en">Reserve →</span></a>
+        <a class="btn btn--ghost" href="contact/"><span lang="ja">お問い合わせ →</span><span lang="en">Contact →</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================== Footer ==================== -->
+<footer class="site-footer" role="contentinfo">
+  <div class="site-footer__inner">
+    <div class="site-footer__top">
+      <div class="site-footer__logo">漣</div>
+      <p class="site-footer__tagline" data-i18n="footer.tagline_jp">ひと漣の、贅沢。</p>
+      <p class="site-footer__tagline-en" data-i18n="footer.tagline_en">Luxury, in a single ripple.</p>
+    </div>
+
+    <div class="site-footer__cols">
+      <div>
+        <p class="site-footer__col-title">Sitemap</p>
+        <ul class="site-footer__col-list">
+          <li><a href="about/" data-i18n="nav.about">漣について</a></li>
+          <li><a href="rooms/" data-i18n="nav.rooms">客室</a></li>
+          <li><a href="dining/" data-i18n="nav.dining">ダイニング</a></li>
+          <li><a href="facilities/" data-i18n="nav.facilities">施設</a></li>
+          <li><a href="experience/" data-i18n="nav.experience">過ごし方</a></li>
+          <li><a href="access/" data-i18n="nav.access">アクセス</a></li>
+          <li><a href="news/" data-i18n="nav.news">お知らせ</a></li>
+          <li><a href="contact/" data-i18n="nav.contact">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-footer__col-title">Contact</p>
+        <ul class="site-footer__col-list">
+          <li data-i18n="footer.address">〒705-0000 岡山県備前市凪島</li>
+          <li data-i18n="footer.tel">TEL：0869-00-0000</li>
+          <li data-i18n="footer.hours">受付：10:00 - 18:00</li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-footer__col-title">Follow</p>
+        <ul class="site-footer__col-list">
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>© <span data-year>2026</span> 漣 / Sazanami</span>
+      <a href="privacy/" data-i18n="footer.privacy">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js?v=20260510b" defer></script>
+<script src="assets/js/main.js?v=20260510b" defer></script>
+<script src="assets/js/chatbot.js?v=20260510b" defer></script>
+<script src="assets/js/hero.js?v=20260510b" defer></script>
+
+</body>
+</html>

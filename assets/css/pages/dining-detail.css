@@ -1,0 +1,180 @@
+/* Dining detail page styles (template for ushio / asage / nagi-no-ma) */
+
+/* Lead section */
+
+.dining-lead {
+  text-align: center;
+}
+
+.dining-lead__heading-en {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: var(--fs-md);
+  letter-spacing: var(--ls-en-wide);
+  color: var(--color-text-3);
+  margin-bottom: var(--space-3);
+}
+
+.dining-lead__heading {
+  font-family: var(--font-jp-serif);
+  font-size: var(--fs-2xl);
+  letter-spacing: var(--ls-heading);
+  margin-bottom: var(--space-7);
+  text-wrap: balance;
+}
+
+html[lang="en"] .dining-lead__heading,
+html[lang="en"] .dining-chef__quote {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-weight: var(--fw-light);
+  letter-spacing: var(--ls-en-wide);
+  line-height: 1.4;
+}
+
+html[lang="en"] .dining-lead__body p {
+  text-wrap: pretty;
+}
+
+.dining-lead__body {
+  max-width: 36em;
+  margin-inline: auto;
+  font-size: var(--fs-md);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-2);
+}
+
+.dining-lead__body p + p { margin-top: 1em; }
+
+/* Plate gallery */
+
+.dining-gallery {
+  padding-block: var(--section-pad-y-sm);
+}
+
+.dining-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+}
+
+@media (max-width: 1199px) {
+  .dining-gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.dining-gallery__item {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.dining-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-very-slow) var(--ease-out);
+}
+
+.dining-gallery__item:hover img {
+  transform: scale(1.05);
+}
+
+/* Chef block */
+
+.dining-chef {
+  background: var(--color-bg-pure);
+  padding-block: var(--section-pad-y);
+}
+
+.dining-chef__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-9);
+  align-items: center;
+}
+
+@media (max-width: 1199px) {
+  .dining-chef__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+}
+
+.dining-chef__image {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.dining-chef__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dining-chef__quote {
+  font-family: var(--font-jp-serif);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-relaxed);
+  letter-spacing: var(--ls-heading);
+  color: var(--color-text);
+  margin-bottom: var(--space-5);
+}
+
+.dining-chef__quote::before {
+  content: "「";
+}
+.dining-chef__quote::after {
+  content: "」";
+}
+
+.dining-chef__name {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: var(--fs-sm);
+  letter-spacing: var(--ls-en-wide);
+  color: var(--color-text-3);
+}
+
+/* Info section */
+
+.dining-info__inner {
+  max-width: var(--container-narrow);
+}
+
+.dining-info__heading {
+  font-family: var(--font-jp-serif);
+  font-size: var(--fs-xl);
+  letter-spacing: var(--ls-heading);
+  margin-bottom: var(--space-5);
+}
+
+.dining-info__heading-en {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: var(--fs-sm);
+  letter-spacing: var(--ls-en-wide);
+  color: var(--color-text-3);
+  margin-bottom: var(--space-2);
+}
+
+/* Other dining */
+
+.dining-others {
+  background: var(--color-bg-pure);
+  padding-block: var(--section-pad-y);
+}
+
+.dining-others__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-7);
+}
+
+@media (max-width: 767px) {
+  .dining-others__list {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+}

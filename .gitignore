@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code working files
+.claude/
+
+# Logs / temp
+*.log
+tmp/
+.cache/
+
+# OS / misc
+Thumbs.db
+desktop.ini
